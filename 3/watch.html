@@ -24,6 +24,7 @@
       <h3>Watch 用法3：deep + handler</h3>
       <input v-model="deepMessage.a.b">
       <span>{{copyMessage}}</span>
+      <button @click="changeMessage">修改值</button>
     </div>
     <div id="root4">
       <h3>Watch 用法4：immediate</h3>
@@ -94,6 +95,13 @@
         methods: {
           handleDeepMessage(value) {
             this.copyMessage = value.a.b
+          },
+          changeMessage() {
+            this.deepMessage = {
+              a: {
+                b: '测试直接修改对象属性值'
+              }
+            }
           }
         }
       })
@@ -102,7 +110,7 @@
         watch: {
           message: {
             handler: 'handleMessage',
-            immediate: true,
+            immediate: true
           }
         },
         data() {

@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Vue.observable</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      {{message}}
+      <button @click="change">Change</button>
+    </div>
+    <script>
+      const state = Vue.observable({ message: 'Vue 2.6' })
+      const mutation2 = {
+        setMessage1(value) {
+          state.message = value
+        }
+      }
+      new Vue({
+        el: '#root',
+        computed: {
+          message() {
+            return state.message
+          }
+        },
+        methods: {
+          change() {
+            // mutation2.setMessage1('Vue 3.0')
+            // 直接修改就可以了，为啥非要放在方法中
+            state.message = '测试'
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
