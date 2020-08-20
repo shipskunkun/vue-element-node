@@ -3,8 +3,11 @@
 
 [Vue Element＋Node.js开发企业通用管理后台系统](https://coding.imooc.com/class/401.html)
 
-
 [慕课网首门基于Element的中后台课程，一套中小型企业通用的后台管理系统](http://www.youbaobao.xyz/admin-docs/guide/)
+
+http://www.youbaobao.xyz/admin-docs/guide/
+
+
 
 
 	第1章 课程介绍
