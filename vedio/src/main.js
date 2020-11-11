@@ -10,7 +10,6 @@ import enLang from 'element-ui/lib/locale/lang/en'// 如果使用中文语言包
 
 import '@/styles/index.scss' // global css
 
-
 import App from './App'
 import store from './store'
 import router from './router'
@@ -43,7 +42,7 @@ Vue.use(Element, {
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
 })
-
+console.log('filters', filters)
 Vue.config.productionTip = false
 
 new Vue({
